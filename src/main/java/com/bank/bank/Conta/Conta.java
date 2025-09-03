@@ -1,5 +1,6 @@
-package com.bank.bank;
+package com.bank.bank.Conta;
 import jakarta.persistence.*;
+
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
@@ -9,20 +10,20 @@ import lombok.NoArgsConstructor;
 @Table(name = "contas")
 public class Conta {
     @Id
-    @GeneratedValue(strategy =GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(nullable = false)
     private String titular;
 
-    @Column(nullable = false,unique = true)
+    @Column(nullable = false, unique = true)
     private String numeroConta;
 
     @Column(nullable = false)
     private Double saldo;
 
     @Column(nullable = false)
-    private String TipoConta;
+    private String tipoConta;
 
     public Long getId() {
         return id;
@@ -57,10 +58,10 @@ public class Conta {
     }
 
     public String getTipoConta() {
-        return TipoConta;
+        return tipoConta;
     }
 
     public void setTipoConta(String tipoConta) {
-        TipoConta = tipoConta;
+        this.tipoConta = tipoConta;
     }
 }

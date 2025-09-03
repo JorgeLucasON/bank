@@ -1,6 +1,5 @@
-package com.bank.bank;
+package com.bank.bank.Conta;
 
-import com.bank.bank.Conta;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
